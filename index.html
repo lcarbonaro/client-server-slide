@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Client-Server Architecture</title>
+	<link rel="icon" type="image/ico" href="favicon.ico">
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<style>
+		.diagram {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;				
+		}
+
+		.box {
+			width: 550px;
+        	min-width: 550px;
+        	max-width: 550px;
+			height: 390px;
+			padding: 10px;
+			border: 2px solid #ccc;
+			border-radius: 8px;
+			box-sizing: border-box;
+		}
+
+		.box h4,h4 {
+			margin-top: 0;
+			color: dodgerblue !important;
+		}
+
+		.arrows {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 40px;
+			width: 400px;
+			padding: 15px;
+			box-sizing: border-box;
+		}
+
+		.arrow {
+			font-weight: bold;
+			color: dodgerblue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+
+			<section style="margin-top: 0; padding-top: 0;">
+				<p>Client-Server Architecture</p>
+				<h4 class="fragment fade-right" data-fragment-index="17">Full-Stack Web Application Development</h4>
+
+				<div class="diagram fragment" data-fragment-index="1">					
+
+					<div class="box fragment" data-fragment-index="2">
+						<h4 class="fragment fade-in" data-fragment-index="2">Client</h4>
+						<ul>
+							<li class="fragment fade-up" data-fragment-index="6">a.k.a. front-end</li>
+							<li class="fragment fade-up" data-fragment-index="7">local browser e.g. Chrome,Firefox,Edge</li>
+							<li class="fragment fade-up" data-fragment-index="8">HTML,CSS,JS</li>
+							<li class="fragment fade-up" data-fragment-index="9">framework e.g. React,Vue</li>
+						</ul>
+					</div>
+
+					<div class="arrows fragment" data-fragment-index="14">
+						<div class="arrow fragment fade-right" data-fragment-index="14">Request
+							&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</div>
+						<div class="arrow fragment fade-left" data-fragment-index="15">
+							&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; Response</div>
+						<div class="arrow fragment fade-left" style="color:white;" data-fragment-index="16">
+							(HTTP)</div>	
+					</div>
+
+					<div class="box fragment" data-fragment-index="5">
+						<h4 class="fragment fade-in" data-fragment-index="5">Server</h4>
+						<ul>
+							<li class="fragment fade-up" data-fragment-index="10">a.k.a. back-end</li>
+							<li class="fragment fade-up" data-fragment-index="11">remote program</li>
+							<li class="fragment fade-up" data-fragment-index="12">Python/Java/NodeJS/PHP</li>
+							<li class="fragment fade-up" data-fragment-index="13">database e.g. Postgres,SQLite,MongoDB</li>
+						</ul>
+					</div>
+				</div>				
+
+			</section>
+		</div>
+	</div>
+
+
+
+	<script type="module" src="main.js"></script>	
+</body>
+
+</html>
